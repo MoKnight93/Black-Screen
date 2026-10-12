@@ -6,7 +6,8 @@
     <meta name="author" content="Mohamed Samir">
     <meta name="description" content="Black Screen">
     <title>Black Screen</title>
-    <link rel="icon" href="https://images.icon-icons.com/1489/PNG/512/blacksquare_102672.png">
+    <!-- Black square icon built into the page, so there is no external link to break -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect width='1' height='1'/%3E%3C/svg%3E">
     <style>
         body {
             background-color: black;
@@ -17,5 +18,15 @@
     </style>
 </head>
 <body>
+    <script>
+        // Double-click anywhere to enter or leave fullscreen
+        document.addEventListener("dblclick", () => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+        });
+    </script>
 </body>
 </html>
